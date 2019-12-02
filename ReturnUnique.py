@@ -4,6 +4,7 @@
 
 def get_unique_string(my_str):
     my_dict = {}
+    unique_string=""
     for s in my_str:
         if s in my_dict:
             my_dict[s] = my_dict[s] + 1
@@ -12,7 +13,9 @@ def get_unique_string(my_str):
 
     for each_dict in my_dict:
         if my_dict[each_dict] == 1:
-            print each_dict
+            unique_string += each_dict
+
+    return unique_string
 
 
-get_unique_string("Hello World")
+print(get_unique_string("Hello World"))
